@@ -1,0 +1,25 @@
+h1 Listing bubbles
+
+table
+  thead
+    tr
+      th Title
+      th Tags
+      th Content
+      th
+      th
+      th
+
+  tbody
+    - @bubbles.each do |bubble|
+      tr
+        td = bubble.title
+        td = bubble.tags
+        td = bubble.content
+        td = link_to 'Show', bubble
+        td = link_to 'Edit', edit_bubble_path(bubble)
+        td = link_to 'Destroy', bubble, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Bubble', new_bubble_path

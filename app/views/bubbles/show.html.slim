@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Title:
+  = @bubble.title
+p
+  strong Tags:
+  = @bubble.tags
+p
+  strong Content:
+  = @bubble.content
+
+= link_to 'Edit', edit_bubble_path(@bubble)
+'|
+= link_to 'Back', bubbles_path

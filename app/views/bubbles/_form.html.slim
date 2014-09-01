@@ -1,0 +1,18 @@
+= form_for @bubble do |f|
+  - if @bubble.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@bubble.errors.count, "error")} prohibited this bubble from being saved:"
+      ul
+        - @bubble.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :tags
+    = f.text_field :tags
+  .field
+    = f.label :content
+    = f.text_field :content
+  .actions = f.submit 'Save'

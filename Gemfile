@@ -34,6 +34,12 @@ gem 'rails-html-sanitizer', '~> 1.0'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'high_voltage'
+gem 'slim'
+gem 'slim-rails'
+gem 'simple_form'
+gem 'thin'
+gem 'pg', '0.17.1'
 
 group :development, :test do
   # Call 'debugger' anywhere in the code to stop execution and get a debugger console
@@ -44,5 +50,14 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'factory_girl_rails'
+  gem 'rspec-rails'
 end
 
+group :test do
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'faker'
+  gem 'launchy'
+  gem 'selenium-webdriver'
+end
